@@ -1,144 +1,283 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
+<!-- Mirrored from starblast.dankdmitron.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Jun 2023 10:49:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="HTTrack is an easy-to-use website mirror utility. It allows you to download a World Wide website from the Internet to a local directory,building recursively all structures, getting html, images, and other files from the server to your computer. Links are rebuiltrelatively so that you can freely browse to the local site (works with any browser). You can mirror several sites together so that you can jump from one toanother. You can, also, update an existing mirror site, or resume an interrupted download. The robot is fully configurable, with an integrated help" />
-	<meta name="keywords" content="httrack, HTTRACK, HTTrack, winhttrack, WINHTTRACK, WinHTTrack, offline browser, web mirror utility, aspirateur web, surf offline, web capture, www mirror utility, browse offline, local  site builder, website mirroring, aspirateur www, internet grabber, capture de site web, internet tool, hors connexion, unix, dos, windows 95, windows 98, solaris, ibm580, AIX 4.0, HTS, HTGet, web aspirator, web aspirateur, libre, GPL, GNU, free software" />
-	<title>Local index - HTTrack Website Copier</title>
-  <!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<style type="text/css">
-	<!--
+    <!-- Site Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-body {
-	margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 8px;
-	background: #77b;
-}
-body, td {
-	font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	}
+    <!-- Embed Metadata -->
+    <title>ServerList+ </title>
 
-#subTitle {
-	background: #000;  color: #fff;  padding: 4px;  font-weight: bold; 
-	}
+    <meta name="description" content="ServerList+ is the most advanced server list website for Starblast.io yet, featuring player listing as well as analysis and live views of team mode games. Created by @dankdmitron, ServerList+ is regularly updated with features and bug fixes.">
+    <meta content="ServerList+" property="og:title">
+    <meta content="starblast.dankdmitron.dev" property="og:site_name">
+    <meta content='/img/dankdmitron.png' property='og:image'>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="index.html"/>
+    <meta name="twitter:title" content="ServerList+"/>
+    <meta name="twitter:description" content="ServerList+ is the most advanced server list website for Starblast.io yet, featuring player listing as well as analysis and live views of team mode games. Created by @dankdmitron, ServerList+ is regularly updated with features and bug fixes."/>
+    <meta name="twitter:image" content="dankdmitron.html"/>
+    <meta name="theme-color" content="#EC2B7A">
 
-#siteNavigation a, #siteNavigation .current {
-	font-weight: bold;  color: #448;
-	}
-#siteNavigation a:link    { text-decoration: none; }
-#siteNavigation a:visited { text-decoration: none; }
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes/default_light.css" id="themeStylesheet">
 
-#siteNavigation .current { background-color: #ccd; }
+    <!-- Site JS Libraries -->
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/classes/PreferencesManager.js"></script>
+    <script type="text/javascript" src="js/classes/SimStatusListProvider.js"></script>
+    <script type="text/javascript" src="js/translation.js"></script>
+    <script type="text/javascript" src="js/classes/SystemListManager.js"></script>
+    <script type="text/javascript" src="js/classes/SystemReportManager.js"></script>
+    
+        <script type="text/javascript" src="js/classes/SpectatorV2.js"></script>
+    
 
-#siteNavigation a:hover   { text-decoration: none;  background-color: #fff;  color: #000; }
-#siteNavigation a:active  { text-decoration: none;  background-color: #ccc; }
+    
+        <script defer data-domain="starblast.dankdmitron.dev" src="../analytics.dankdmitron.dev/js/viewserverlist.js"></script>
 
+    
 
-a:link    { text-decoration: underline;  color: #00f; }
-a:visited { text-decoration: underline;  color: #000; }
-a:hover   { text-decoration: underline;  color: #c00; }
-a:active  { text-decoration: underline; }
+    <script type="text/javascript" src="js/lib/mapGen.js"></script>
+    <script type="text/javascript" src="js/lib/renderingUtils.js"></script>
+    <script type="text/javascript" src="js/lib/ecpIcon.js"></script>
 
-#pageContent {
-	clear: both;
-	border-bottom: 6px solid #000;
-	padding: 10px;  padding-top: 20px;
-	line-height: 1.65em;
-	background-image: url(backblue.gif);
-	background-repeat: no-repeat;
-	background-position: top right;
-	}
-
-#pageContent, #siteNavigation {
-	background-color: #ccd;
-	}
-
-
-.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
-.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
-
-hr { height: 1px;  color: #000;  background-color: #000;  margin-bottom: 15px; }
-
-h1 { margin: 0;  font-weight: bold;  font-size: 2em; }
-h2 { margin: 0;  font-weight: bold;  font-size: 1.6em; }
-h3 { margin: 0;  font-weight: bold;  font-size: 1.3em; }
-h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
-
-.blak { background-color: #000; }
-.hide { display: none; }
-.tableWidth { min-width: 400px; }
-
-.tblRegular       { border-collapse: collapse; }
-.tblRegular td    { padding: 6px;  background-image: url(fade.gif);  border: 2px solid #99c; }
-.tblHeaderColor, .tblHeaderColor td { background: #99c; }
-.tblNoBorder td   { border: 0; }
-
-
-// -->
-</style>
+    <!-- Site Mode -->
+    <script type="text/javascript">
+        window.siteConfig = {"analytics":{"enabled":true},"mode":"live","live-api-provider":"wss://starblast.dankdmitron.dev:7340","static-api-provider":"https://starblast.dankdmitron.dev:7340/"};
+    </script>
 
 </head>
+<body>
+<div class="modal" tabindex="-1" id="aboutModal" data-nosnippet>
+    <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5 class="text-center">ServerList+ v2</h5>
+                <hr class="m-1 pb-1">
+                <b class="float-start">Days Since Last Update</b>
+                <span class="float-end">8 days</span>
+                <br>
+                <b class="float-start">Build ID</b>
+                <span class="float-end">84e3f64</span>
+                <br>
+                <hr class="m-1 pb-1">
+                ServerList+ is a free tool created by <b>@dankdmitron</b> for displaying the status of active
+                <a class="no-underline" href="https://starblast.io/">Starblast.io</a>
+                games. Special thanks goes out to:
 
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="3" class="tableWidth">
-	<tr>
-	<td id="subTitle">HTTrack Website Copier - Open Source offline browser</td>
-	</tr>
-</table>
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
-<tr class="blak">
-<td>
-	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
-	<tr>
-	<td colspan="6"> 
-		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
-		<tr> 
-		<td id="pageContent"> 
-<!-- ==================== End prologue ==================== -->
+                <ul>
+                    <li><b>@bhpsngum</b> for providing code to render ECP badges</li>
+                    <li><b>AlbieMorrison#5416</b> for helping with obtaining ship icons</li>
+                    <li>All of those who have made themes for the old ServerList+</li>
+                </ul>
+                <hr class="m-1 pb-1">
+                <i>ServerList+ is in no way affiliated with or endorsed by Neuronality SARL.</i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" id="settingsModal" data-nosnippet>
+    <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-check ps-0">
+                    <label class="form-check-label" for="preferenceCopyFullLink"><b>Use Full Links</b></label>
+                    <input class="form-check-input float-end" type="checkbox" name="preferenceCopyFullLink" id="preferenceCopyFullLink">
+                </div>
+                <div class="form-check ps-0 ">
+                    <label class="form-check-label" for="preferenceCenterMapAsteroids"><b>Center Map on Asteroid Field</b></label>
+                    <input class="form-check-input float-end" type="checkbox" name="preferenceCopyFullLink" id="preferenceCenterMapAsteroids">
+                </div>
+                <label for="preferenceTheme" class="float-start pt-1"><b>Theme</b></label>
+                <select id="preferenceTheme" class="form-select-sm float-end">
+                    <option value="/css/themes/default_light.css">Light&nbsp</option>
+                    <option value="/css/themes/default_dark.css">Dark&nbsp</option>
+                    <option value="/css/themes/dankdmitron/1337.css">1337 by dankdmitron&nbsp</option>
+                    <option value="/css/themes/bhpsngum/starblast.css">Starblast by Bhpsngum&nbsp</option>
+                    <option value="/css/themes/caramel/blue.css">Blue by Caramel&nbsp</option>
+                    <option value="/css/themes/caramel/caramel.css">Caramel by Caramel&nbsp</option>
+                    <option value="/css/themes/caramel/pink-purple.css">Pink-Purple by Caramel&nbsp</option>
+                    <option value="/css/themes/caramel/purple.css">Purple by Caramel&nbsp</option>
+                    <option value="/css/themes/halcyon/elegant.css">Elegant by Halcyon&nbsp</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
 
-	<meta name="generator" content="HTTrack Website Copier/3.x">
-	<TITLE>Local index - HTTrack</TITLE>
-</HEAD>
-<BODY>
-<H1 ALIGN=Center>Index of locally available sites:</H1>
-	<TABLE BORDER="0" WIDTH="100%" CELLSPACING="1" CELLPADDING="0">
-		<TR>
-			<TD BACKGROUND="fade.gif">
-				&middot;
-					<A HREF="starblast.dankdmitron.dev/index.html">
-						ServerList+
-					</A>		
-			</TD>
-		</TR>
-	</TABLE>
-	<BR>
-	<BR>
-	<BR>
-  	<H6 ALIGN="RIGHT">
-	<I>Mirror and index made by HTTrack Website Copier [XR&amp;CO'2008]</I>
-	</H6>
-	<!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<!-- Thanks for using HTTrack Website Copier! -->
-	<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=starblast.dankdmitron.dev/index.html">
+    <div class="modal" tabindex="-1" id="spectatorModal" data-nosnippet>
+    <div class="modal-dialog mt-0 modal-xl d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="spectatorModalTitle">Spectating: ???</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="spectateRow">
+                    <div class="col-sm-6 px-0">
+                        <canvas id="spectatorCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal" tabindex="-1" id="shareGameModal" data-nosnippet>
+    <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h5 class="text-center">Share Custom Game</h5>
+                <label for="customGameLinkInput" class="d-none"></label>
+                <div class="input-group">
+                    <input type="text" id="customGameLinkInput" class="form-control" autocomplete="off" autocapitalize="off" placeholder="https://starblast.io/#1234@123.123.123.123">
+                    <button class="btn btn-danger" id="shareCustomGame"><i class="bi bi-arrow-bar-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="container" data-nosnippet>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container-fluid px-0">
+            <a class="navbar-brand">
+                <b>ServerList+</b>
+                
+                    <span>v2</span>
+                
+            </a>
+            <a class="ms-auto me-2 nav-link nav-icon bi bi-pc-display" href="app.html" title="Desktop App Port"></a>
+            <a class="me-2 nav-link nav-icon bi bi-github" href="https://github.com/dpleshkov/serverlistplus-client"></a>
+            <a class="me-2 nav-link nav-icon bi bi-discord" href="https://discord.com/invite/5fs5bzxk4t"></a>
+            <a class="me-2 nav-link nav-icon bi bi-gear-fill" id="navbarSettingsButton"></a>
+            <a class="nav-link nav-icon bi bi-info-circle-fill" id="navbarAboutButton"></a>
+        </div>
+    </nav>
+    <div class="row">
+        <!-- View Options -->
+        <div class="col-sm-2 pt-3" id="viewOptions">
+            <!-- Region Selection -->
+            <h5>Region: </h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="region" id="America" checked>
+                <label class="form-check-label" for="America">America</label>
+                <i class="bi bi-person-fill"></i>
+                <span id="countAmerica">69</span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="region" id="Europe">
+                <label class="form-check-label" for="Europe">Europe</label>
+                <i class="bi bi-person-fill"></i>
+                <span id="countEurope">69</span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="region" id="Asia">
+                <label class="form-check-label" for="Asia">Asia</label>
+                <i class="bi bi-person-fill"></i>
+                <span id="countAsia">69</span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input d-none" type="radio" name="region" id="World">
+                <label class="form-check-label" for="World"><b>Total</b></label>
+                <i class="bi bi-person-fill"></i>
+                <span id="countTotal">420</span>
+            </div>
+            <!-- Mode Selection -->
+            <h5 class="mt-3">Mode:</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="teamMode" checked>
+                <label class="form-check-label" for="teamMode"><i class="bi bi-people-fill"></i> Team Mode</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="survivalMode" checked>
+                <label class="form-check-label" for="survivalMode"><i class="bi bi-bullseye"></i> Survival Mode</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="deathmatchMode" checked>
+                <label class="form-check-label" for="deathmatchMode"><i class="bi bi-trophy-fill"></i>
+                    Deathmatch</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="moddingMode" checked>
+                <label class="form-check-label" for="moddingMode"><i class="bi bi-code-slash"></i> Modded</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invasionMode">
+                <label class="form-check-label" for="invasionMode"><i class="bi bi-border"></i> Invasion</label>
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" value="" id="customMode">
+                <label class="form-check-label" for="customMode"><i class="bi bi-wrench"></i> Custom</label>
+            </div>
+            <!-- Notification Option -->
+            <h5 class="mt-3">Options:</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="newServerAlert">
+                <label class="form-check-label" for="newServerAlert"><i class="bi bi-bell-fill"></i> New Server
+                    Alert</label>
+            </div>
+            <br>
+            <small style="font-size: 0.75rem">ServerList+ listeners do not show up on game leaderboards. Any 👁️ you see is not ServerList+.</small>
+        </div>
+        <!-- System List -->
+        <div class="col-sm-5" id="systemsListContainer">
+            <div class="card system-list-item mb-3" id="shareCustomGameCard">
+                <div class="card-body text-center user-select-none">
+                    <i class="bi bi-plus"></i> Share custom game
+                </div>
+            </div>
+            <div id="systemsList"></div>
+        </div>
+        <!-- System Info -->
+        <div class="col-sm-5" id="systemReport">
+            <div class="card system-report-card">
+                <div class="card-body">
+                    <h3 class="text-center mb-0" id="SR_Name">Trappist-1</h3>
+                    <b class="float-start">Mode</b><span class="float-end" id="SR_Mode">Team Mode</span><br>
+                    <b class="float-start">Region</b><span class="float-end" id="SR_Region">America</span><br>
+                    <b class="float-start">Age</b><span class="float-end" id="SR_Time">69 min</span><br>
+                    <b class="float-start">ID</b><span class="float-end" id="SR_ID">#1234</span><br>
+                    <b class="float-start">Criminality</b><span class="float-end" id="SR_Criminality">4</span><br>
+                    <b class="float-start">Player Count</b><span class="float-end" id="SR_PlayerCount">70</span><br>
+                    <div id="SR_StaticAPIRequired">
+                        <b class="float-start">ECP Count</b><span class="float-end" id="SR_ECPCount">70</span><br>
+                        <div id="SR_TeamModeRequired">
+                            <b class="float-start">Total Team Scores</b><span class="float-end" id="SR_TotalTeamScores">70</span><br>
+                        </div>
+                        <b class="float-start">Player List</b><span class="float-end" id="SR_PlayerList">70</span><br>
+                    </div>
+                    <div class="btn-group w-100 mt-3">
+                        <button class="btn btn-outline-danger" id="systemCopyLink">
+                            <i class="bi bi-clipboard" id="clipboard"></i>
+                        </button>
+                        <a class="w-90 btn btn-outline-danger rounded-end" id="systemReportLink">Join Game</a>
+                        <button class="btn btn-outline-danger" id="systemSpectateButton">
+                            <i class="bi bi-eye-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- ==================== Start epilogue ==================== -->
-		</td>
-		</tr>
-		</table>
-	</td>
-	</tr>
-	</table>
-</td>
-</tr>
-</table>
+<!-- Force Font Preload Workaround -->
+<div class="font-preload">
+    <span style="font-family: SBGlyphs;"></span>
+</div>
 
-<table width="76%" border="0" align="center" valign="bottom" cellspacing="0" cellpadding="0">
-	<tr>
-	<td id="footer"><small>&copy; 2008 Xavier Roche & other contributors - Web Design: Leto Kauler.</small></td>
-	</tr>
-</table>
+<!-- Site JS Scripts -->
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/serverList.js"></script>
 
 </body>
 
+<!-- Mirrored from starblast.dankdmitron.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Jun 2023 10:49:34 GMT -->
 </html>
-
-
