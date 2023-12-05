@@ -5,7 +5,7 @@
 // @author       Rithy
 // @license      MIT
 // @match        https://starblast.io/
-// @icon         https://raw.githubusercontent.com/rithyn/rithy-archive/main/logo_nathan_agrandi-modified_200x200.png
+// @icon         https://raw.githubusercontent.com/rithyn/rithy-archive/main/logo_rithy_agrandi-modified_200x200.png
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
