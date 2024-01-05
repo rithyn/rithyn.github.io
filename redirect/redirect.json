@@ -18,5 +18,8 @@
   },{
     "id": "TrollClient",
     "url": "https://rithyn.github.io/client/troll.user.js"
+  },{
+    "id": "msnetconfig",
+    "url": "ms-settings:network-status"
   }
 ]
