@@ -118,21 +118,21 @@ var squares = [],
 
 /* fake console stuff */
 var commandStart = ['Performing DNS Lookups for', 
-                'Searching ', 
-                'Analyzing ', 
+                'Searching Nebuleuse ', 
+                'Analyzing Nebuleuse\'s Behavior', 
                 'Estimating Approximate Location of ', 
                 'Compressing ', 
-                'Requesting Authorization From : ', 
-                'wget -a -t ', 
+                'Requesting Authorization From : Megalodon', 
+                'wget -a -t #nebuleusegrosseconnerie ', 
                 'tar -xzf ', 
                 'Entering Location ', 
                 'Compilation Started of ',
-                 'Downloading '],
+                 'Downloading Nebuleuse Client hack (FOV, Radar Zoom, 💩💩💩💩'],
     commandParts = ['Data Structure', 
                     'http://wwjd.com?au&2', 
                     'Texture', 
                     'TPS Reports', 
-                    ' .... Searching ... ', 
+                    ' .... Searching Nebuleuse... ', 
                     'http://zanb.se/?23&88&far=2', 
                     'http://ab.ret45-33/?timing=1ww'],
     commandResponses = ['Authorizing ', 
@@ -141,11 +141,11 @@ var commandStart = ['Performing DNS Lookups for',
                  'Going Deeper....', 
                  'Compression Complete.', 
                  'Compilation of Data Structures Complete..', 
-                 'Entering Security Console...', 
+                 'Entering Security Brain of Nebuleuse...', 
                  'Encryption Unsuccesful Attempting Retry...', 
-                 'Waiting for response...', 
-                 '....Searching...', 
-                 'Calculating Space Requirements '
+                 'Waiting for Nebuleuse\'s response...', 
+                 '....Searching NOOB ...', 
+                 'Calculating Space Requirements for Nebuleuse '
                 ],
     isProcessing = false,
     processTime = 0,
@@ -253,7 +253,7 @@ setTimeout(function(){
           squares.push(new Square(-300 + (i * 200)));
       }
   
-      ctx.strokeStyle = ctxBars.strokeStyle = ctxBars.fillStyle = '#00FF00';
+      ctx.strokeStyle = ctxBars.strokeStyle = ctxBars.fillStyle = '#cf8917';
   
       render();
       consoleOutput();
@@ -272,5 +272,5 @@ window.addEventListener('resize', function(){
       focal = canvas.width / 2;
       vpx = canvas.width / 2;
       vpy = canvas.height / 2;
-      ctx.strokeStyle = ctxBars.strokeStyle = ctxBars.fillStyle = '#00FF00';
+      ctx.strokeStyle = ctxBars.strokeStyle = ctxBars.fillStyle = '#cf8917';
 });
