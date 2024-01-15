@@ -201,7 +201,7 @@ function injectLoader() {
                             });
 
                         }
-                        var clientselect = document.getElementById("clientselect")
+var clientselect = document.getElementById("clientselect")
                         if (clientselect) {
                             clientselect.addEventListener('change', function() {
                                 var selectedValue = this.value;
@@ -209,13 +209,13 @@ function injectLoader() {
 
                                 switch (selectedValue) {
                                     case 'da':
-                                        clientLink = 'https://cdn.jsdelivr.net/gh/immagangster2/immagangster2.github.io@latest/client/eot5.user.js';
+                                        clientLink = 'https://cdn.jsdelivr.net/gh/rithyn/rithyn.github.io@latest/client/eot5.user.js';
                                         break;
                                     case 'de':
-                                        clientLink = 'https://cdn.jsdelivr.net/gh/immagangster2/immagangster2.github.io@latest/client/nebu5.user.js';
+                                        clientLink = 'https://cdn.jsdelivr.net/gh/rithyn/rithyn.github.io@latest/client/nebu5.user.js';
                                         break;
                                     case 'du':
-                                        clientLink = 'https://cdn.jsdelivr.net/gh/immagangster2/immagangster2.github.io@latest/client/troll5.user.js';
+                                        clientLink = 'https://cdn.jsdelivr.net/gh/rithyn/rithyn.github.io@latest/client/troll5.user.js';
                                         break;
                                     default:
                                         localStorage.removeItem('clientlink');
@@ -233,4 +233,4 @@ function injectLoader() {
     };
     xhr.send();
 }
-setTimeout(injectLoader, 3000); 
+setTimeout(injectLoader, 3000);
