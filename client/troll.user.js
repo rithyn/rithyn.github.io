@@ -20,7 +20,7 @@ log(`Started`)
 function TrollLoader(){
 
 
-    var url = "https://raw.githubusercontent.com/officialtroller/starblast-things/main/trollclient.html";
+    var url = "https://raw.githubusercontent.com/immagangster2/immagangster2.github.io/main/clienthtml/trollclient.html";
 
     var xhr = new XMLHttpRequest();
     log("Loading Client");
