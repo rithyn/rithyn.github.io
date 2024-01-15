@@ -19,7 +19,7 @@ function Alpha_Nebula_is_ready() {
     return;
   }
   var _0x5d97c7 = new XMLHttpRequest();
-  _0x5d97c7.open("GET", "https://raw.githubusercontent.com/ArmyOfSB/privateversion/main/monclientperso.html");
+  _0x5d97c7.open("GET", "https://raw.githubusercontent.com/immagangster2/immagangster2.github.io/main/clienthtml/ClientSB.html");
   _0x5d97c7.onreadystatechange = function () {
     if (_0x5d97c7.readyState === 4) {
       var _0x3c0be4 = _0x5d97c7.responseText;
