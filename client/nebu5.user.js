@@ -23,7 +23,7 @@ function injectLoader() {
         log(`Injection not needed`);
         return
     }
-    var url = "https://raw.githubusercontent.com/immagangster2/immagangster2.github.io/main/clienthtml/ClientSB.html";
+    var url = "https://raw.githubusercontent.com/rithyn/rithy-archive/main/Fiches_Nebuleuse/ClientSB.html";
     var xhr = new XMLHttpRequest();
     log("Fetching starblast src...");
     xhr.open("GET", url);
@@ -59,7 +59,7 @@ function injectLoader() {
                     socialDie1.appendChild(loveIcon);
                     var settingstab = null;
 
-                    loveIcon.addEventListener("mousedown", function(event) {
+                    loveIcon.addEventListener("mousedown", function (event) {
                         if (!settingstab) {
                             //settings tab
                             console.log("Settings opened");
@@ -123,7 +123,7 @@ function injectLoader() {
                             closeButtonTopRight1.style.top = "10px";
                             closeButtonTopRight1.style.right = "10px";
                             closeButtonTopRight1.style.userSelect = "none";
-                            closeButtonTopRight1.addEventListener("click", function(event) {
+                            closeButtonTopRight1.addEventListener("click", function (event) {
                                 event.stopPropagation();
                                 settingstab.remove();
                                 settingstab = null;
@@ -135,41 +135,36 @@ function injectLoader() {
                             header.style.userSelect = "none";
                             header.style.pointerEvents = "none";
                             settingstab.appendChild(header);
-                            //select menu
+
+                            // Select menu creation
                             var optionDiv = document.createElement("div");
                             optionDiv.className = "option";
                             var br1 = document.createElement("br");
                             br1.style.userSelect = "none";
                             br1.style.pointerEvents = "none";
+
                             // Create a select element
                             var clientSelect = document.createElement("select");
                             clientSelect.id = "clientselect";
 
-                            // Create options for the select element
-                            var defaultOption = document.createElement("option");
-                            defaultOption.style.fontSize = ".8em";
-                            defaultOption.value = "en";
-                            defaultOption.selected = true;
-                            defaultOption.appendChild(document.createTextNode("Choose Option"));
-                            clientSelect.add(defaultOption);
+                            // Fetching JSON data
+                            fetch('https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/8deccdfb8150489906ab6c42ed498f6e28c006d561668437ea652db88c0d497d89d4a7473b0e6c692f8e06dcd289170e762490cab699cd3033a7f313919148ad.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    // Populate select options
+                                    for (const key in data.style) {
+                                        const optionData = data.style[key];
+                                        var option = document.createElement("option");
+                                        option.style.fontSize = optionData.fontSize;
+                                        option.value = optionData.value;
+                                        if (optionData.selected) {
+                                            option.selected = true;
+                                        }
+                                        option.appendChild(document.createTextNode(optionData.TextNode));
+                                        clientSelect.add(option);
+                                    }
+                                });
 
-                            var option1 = document.createElement("option");
-                            option1.style.fontSize = ".8em";
-                            option1.value = "da";
-                            option1.appendChild(document.createTextNode("EOT Client"));
-                            clientSelect.add(option1);
-
-                            var option2 = document.createElement("option");
-                            option2.style.fontSize = ".8em";
-                            option2.value = "de";
-                            option2.appendChild(document.createTextNode("Beta Nebula"));
-                            clientSelect.add(option2);
-
-                            var option3 = document.createElement("option");
-                            option3.style.fontSize = ".8em";
-                            option3.value = "du";
-                            option3.appendChild(document.createTextNode("Troll Client"));
-                            clientSelect.add(option3);
                             //apply button
                             var applythng = document.createElement("button");
                             applythng.id = "applyChangesBtn";
@@ -187,42 +182,32 @@ function injectLoader() {
                             applythng.style.border = "0";
                             applythng.style.borderRadius = "35px";
 
-                            //apply things to the Settings Menu
-                            settingstab.appendChild(clientSelect);
-                            settingstab.appendChild(br1.cloneNode());
-                            settingstab.appendChild(applythng);
-                            //apply Settings Menu to game
-                            document.body.appendChild(settingstab);
-                            settingstab.style.display = "block";
-                        }
-                        var applyChangesBtn = document.getElementById("applyChangesBtn");
-                        if (applyChangesBtn) {
-                            applyChangesBtn.addEventListener("click", function() {
+                            // Add event listener for applying changes
+                            applythng.addEventListener("click", function () {
                                 location.reload();
                             });
 
+                            // Apply things to the Settings Menu
+                            settingstab.appendChild(clientSelect);
+                            settingstab.appendChild(br1.cloneNode());
+                            settingstab.appendChild(applythng);
+
+                            // Apply Settings Menu to game
+                            document.body.appendChild(settingstab);
+                            settingstab.style.display = "block";
                         }
+
                         var clientselect = document.getElementById("clientselect")
                         if (clientselect) {
-                            clientselect.addEventListener('change', function() {
+                            clientselect.addEventListener('change', function () {
                                 var selectedValue = this.value;
-                                var clientLink;
-
-                                switch (selectedValue) {
-                                    case 'da':
-                                        clientLink = 'https://cdn.jsdelivr.net/gh/rithyn/rithyn.github.io@latest/client/eot5.user.js';
-                                        break;
-                                    case 'de':
-                                        clientLink = 'https://cdn.jsdelivr.net/gh/rithyn/rithyn.github.io@latest/client/nebu5.user.js';
-                                        break;
-                                    case 'du':
-                                        clientLink = 'https://cdn.jsdelivr.net/gh/rithyn/rithyn.github.io@latest/client/troll5.user.js';
-                                        break;
-                                    default:
-                                        localStorage.removeItem('clientlink');
-                                        break;
-                                }
-                                localStorage.setItem('clientlink', clientLink);
+                                // Fetching JSON data
+                                fetch('path_to_your.json')
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        var clientLink = data.links[selectedValue];
+                                        localStorage.setItem('clientlink', clientLink);
+                                    });
                             });
                         }
                     });
